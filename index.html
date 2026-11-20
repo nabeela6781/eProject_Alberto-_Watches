@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALBERTO | Luxury Watch Company</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #090909;
+    --dark: #12100d;
+    --brown: #24190f;
+    --gold: #c6a15b;
+    --light-gold: #e6c982;
+    --white: #f5f1e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR FIX */
+
+.navbar {
+    background: rgba(8,8,8,.98);
+    border-bottom: 1px solid rgba(198,161,91,.35);
+    padding: 12px 5%;
+    width: 100%;
+    min-height: 82px;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.navbar > .container-fluid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold) !important;
+    margin-right: 20px;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+    color: var(--light-gold) !important;
+}
+
+.crown-logo {
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    fill: var(--gold);
+    stroke: var(--gold);
+    stroke-width: 1;
+}
+
+.navbar-brand span {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: .9;
+    color: var(--gold);
+}
+
+.navbar-brand small {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #c9bda8;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.navbar-collapse {
+    align-items: center;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    color: #e9e0d2;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    margin: 0 7px;
+    padding: 10px 0;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--gold);
+}
+
+.navbar-toggler {
+    border: 1px solid var(--gold);
+    padding: 7px 10px;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(198,161,91,.2) !important;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.visitors {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+/* BUTTONS */
+
+.gold-btn {
+    display: inline-block;
+    background: linear-gradient(120deg, #a77b36, #e2c27c, #a77b36);
+    color: #100d08;
+    padding: 13px 28px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 1px solid var(--gold);
+    transition: .35s;
+}
+
+.gold-btn:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.outline-btn {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 13px 28px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.outline-btn:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.75) 45%, rgba(0,0,0,.2) 100%),
+        url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+    padding: 100px 0;
+    animation: slideUp 1.2s ease;
+}
+
+.hero-small {
+    color: var(--gold);
+    letter-spacing: 5px;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: .95;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero p {
+    color: #c6bfb2;
+    font-size: 13px;
+    line-height: 2;
+    max-width: 450px;
+    margin: 25px 0 32px;
+}
+
+.hero-line {
+    height: 1px;
+    width: 90px;
+    background: var(--gold);
+    margin: 25px 0;
+}
+
+/* COMMON SECTION */
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    font-size: clamp(38px, 5vw, 62px);
+    color: var(--white);
+    margin: 15px 0;
+}
+
+.section-description {
+    color: #a9a094;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* FEATURES */
+
+.feature-strip {
+    background: linear-gradient(110deg, #1a130c, #0b0a08, #21170d);
+    border-top: 1px solid rgba(198,161,91,.35);
+    border-bottom: 1px solid rgba(198,161,91,.35);
+    padding: 30px 0;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.feature-item i {
+    color: var(--gold);
+    font-size: 27px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature-item h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--white);
+}
+
+.feature-item p {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #a99b84;
+    margin: 0;
+}
+
+/* COLLECTIONS */
+
+.collections {
+    background:
+        linear-gradient(rgba(9,9,9,.94), rgba(9,9,9,.97)),
+        url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=1800&q=80') center/cover fixed;
+}
+
+.watch-card {
+    position: relative;
+    overflow: hidden;
+    background: #17130f;
+    border: 1px solid rgba(198,161,91,.35);
+    height: 100%;
+}
+
+.watch-card img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.watch-card:hover img {
+    transform: scale(1.06);
+}
+
+.watch-card-content {
+    padding: 25px;
+    border-top: 1px solid rgba(198,161,91,.3);
+}
+
+.watch-card-content h3 {
+    color: var(--light-gold);
+    font-size: 27px;
+}
+
+.watch-card-content p {
+    color: #a99e8e;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.watch-price {
+    color: var(--gold);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.card-link {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 5px;
+}
+
+/* EDITORIAL */
+
+.editorial {
+    background:
+        linear-gradient(90deg, rgba(12,10,8,.96), rgba(12,10,8,.72)),
+        url('https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1800&q=85') center/cover;
+    background-attachment: fixed;
+}
+
+.editorial-box {
+    padding: 50px;
+    border: 1px solid rgba(198,161,91,.5);
+    background: rgba(12,10,8,.6);
+}
+
+.editorial-box h2 {
+    font-size: clamp(40px, 6vw, 70px);
+}
+
+.editorial-box p {
+    color: #c0b6a6;
+    font-size: 13px;
+    line-height: 2;
+}
+
+/* FEATURED CAROUSEL */
+
+.showcase {
+    background: #100d09;
+}
+
+.carousel-frame {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(198,161,91,.4);
+}
+
+.carousel-frame img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    display: block;
+    transition: opacity .25s ease;
+}
+
+.carousel-caption-custom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 70px 35px 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,.95));
+}
+
+.carousel-caption-custom h3 {
+    font-size: 38px;
+    color: var(--light-gold);
+}
+
+.carousel-caption-custom p {
+    font-size: 11px;
+    color: #ddd;
+}
+
+.carousel-control-custom {
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--gold);
+    background: rgba(0,0,0,.8);
+    color: var(--gold);
+    font-size: 22px;
+    transition: .3s;
+}
+
+.carousel-control-custom:hover {
+    background: var(--gold);
+    color: #111;
+}
+
+/* BRAND STORY */
+
+.story {
+    background: linear-gradient(130deg, #21170e, #090909 65%);
+}
+
+.story-image {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border: 1px solid rgba(198,161,91,.4);
+}
+
+.story-content {
+    padding: 35px;
+}
+
+.story-content p {
+    color: #b9ad9c;
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+/* TEXT WITH BACKGROUND IMAGE */
+
+.text-image-section {
+    background-image:
+        linear-gradient(rgba(5,5,5,.72), rgba(5,5,5,.82)),
+        url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.text-image-overlay {
+    padding: 130px 20px;
+    border-top: 1px solid rgba(198,161,91,.4);
+    border-bottom: 1px solid rgba(198,161,91,.4);
+}
+
+.luxury-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 6vw, 75px);
+    color: #f5f1e9;
+    margin: 25px 0;
+}
+
+.luxury-heading span {
+    color: #c6a15b;
+    font-style: italic;
+}
+
+.text-image-section p {
+    color: #ddd2c1;
+    font-size: 13px;
+    line-height: 2.2;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #070707;
+    border-top: 1px solid rgba(198,161,91,.4);
+    padding: 55px 0 20px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--gold);
+    font-size: 37px;
+    letter-spacing: 5px;
+}
+
+footer p {
+    color: #9b9183;
+    font-size: 11px;
+    line-height: 2;
+}
+
+footer h5 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    display: block;
+    color: #aaa092;
+    font-size: 11px;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
+
+.social-links a {
+    color: var(--gold);
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+.copyright {
+    border-top: 1px solid #30271d;
+    padding-top: 20px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* MODAL */
+
+.modal-content {
+    background: #15110d;
+    border: 1px solid var(--gold);
+    border-radius: 0;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(198,161,91,.3);
+}
+
+.modal-title {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+}
+
+.btn-close {
+    filter: invert(1);
+}
+
+/* ANIMATIONS */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1199px) {
+    .navbar-nav .nav-link {
+        margin: 0 5px;
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .navbar-brand span {
+        font-size: 27px;
+    }
+
+    .visitors {
+        font-size: 9px;
+        margin-left: 8px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    .navbar {
+        padding: 12px 5%;
+        min-height: 75px;
+    }
+
+    .navbar > .container-fluid {
+        flex-wrap: wrap;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+
+    .navbar-collapse {
+        flex-basis: 100%;
+        width: 100%;
+        background: #080808;
+        border-top: 1px solid rgba(198,161,91,.3);
+        margin-top: 13px;
+        padding: 10px 0 5px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start !important;
+        padding: 8px 0;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 11px 5px;
+        margin: 0;
+        font-size: 11px;
+        width: 100%;
+    }
+
+    .visitors {
+        display: block;
+        margin: 8px 5px 12px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 600px;
+        background-position: 60% center;
+    }
+
+    .editorial-box {
+        padding: 30px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: 590px;
+        background-position: 62% center;
+    }
+
+    .hero-content {
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .watch-card img {
+        height: 300px;
+    }
+
+    .carousel-frame img {
+        height: 360px;
+    }
+
+    .carousel-caption-custom h3 {
+        font-size: 29px;
+    }
+
+    .story-image {
+        height: 330px;
+    }
+
+    .text-image-section {
+        background-attachment: scroll;
+    }
+
+    .text-image-overlay {
+        padding: 85px 15px;
+    }
+}
+
+@media(max-width: 400px) {
+
+    .navbar-brand span {
+        font-size: 25px;
+    }
+
+    .crown-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .gold-btn,
+    .outline-btn {
+        padding: 11px 17px;
+        font-size: 9px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<!-- sticky-top removed to prevent header overlap -->
+<nav class="navbar navbar-expand-lg">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="index.html">
+
+<svg class="crown-logo"
+     xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 64 64"
+     role="img"
+     aria-label="Alberto crown logo">
+
+    <path d="M8 18 L20 29 L30 10 L42 29 L56 18 L50 46 L14 46 Z"/>
+    <path d="M14 51 H50 V56 H14 Z"/>
+    <circle cx="8" cy="16" r="4"/>
+    <circle cx="30" cy="8" r="4"/>
+    <circle cx="56" cy="16" r="4"/>
+
+</svg>
+
+<span>
+ALBERTO
+<small>WATCH COMPANY</small>
+</span>
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#mainNavbar"
+aria-controls="mainNavbar"
+aria-expanded="false"
+aria-label="Toggle navigation">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="mainNavbar">
+
+<ul class="navbar-nav mx-auto align-items-lg-center">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="product.html">Products</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="technology.html">Technology</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link locator-btn" href="store-locator.html">Store Locator</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="support.html">Support</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="aboutus.html">About Us</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact Us</a>
+</li>
+
+</ul>
+
+<div class="visitors">
+<i class="bi bi-people-fill"></i>
+Visitors: 1247
+</div>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="hero-small">THE ART OF TIMEKEEPING</div>
+
+<h1>
+TIMELESS<br>
+<span>Elegance</span>
+</h1>
+
+<div class="hero-line"></div>
+
+<p>
+Discover the perfect harmony of precision, craftsmanship and timeless luxury. Experience watches designed for those who appreciate excellence.
+</p>
+
+<a href="#collections" class="gold-btn me-2">EXPLORE COLLECTION</a>
+<a href="#story" class="outline-btn">DISCOVER MORE</a>
+
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+
+<section class="feature-strip">
+<div class="container">
+<div class="row">
+
+<div class="col-6 col-lg-3 feature-item">
+<i class="bi bi-gem"></i>
+<h5>Premium Quality</h5>
+<p>EXCEPTIONAL MATERIALS</p>
+</div>
+
+<div class="col-6 col-lg-3 feature-item">
+<i class="bi bi-watch"></i>
+<h5>Fine Craftsmanship</h5>
+<p>MADE WITH PRECISION</p>
+</div>
+
+<div class="col-6 col-lg-3 feature-item">
+<i class="bi bi-shield-check"></i>
+<h5>Trusted Elegance</h5>
+<p>TIMELESS CONFIDENCE</p>
+</div>
+
+<div class="col-6 col-lg-3 feature-item">
+<i class="bi bi-stars"></i>
+<h5>Unique Design</h5>
+<p>STYLE THAT LASTS</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- COLLECTIONS -->
+
+<section class="collections section-padding" id="collections">
+<div class="container">
+
+<div class="text-center mb-5 reveal">
+<div class="section-label">OUR EXCLUSIVE RANGE</div>
+<h2 class="section-heading">The Signature Collections</h2>
+<p class="section-description">A collection that reflects your personality and celebrates timeless design.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-4 reveal">
+<div class="watch-card">
+<img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=900&q=85" alt="Classic luxury watch">
+<div class="watch-card-content">
+<h3>Classic Collection</h3>
+<p>Elegant designs inspired by timeless traditions and refined details.</p>
+<div class="d-flex justify-content-between align-items-center mt-4">
+<span class="watch-price">Timeless Style</span>
+<a href="#" class="card-link" onclick="showProduct('Classic Collection');return false;">DISCOVER</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 reveal">
+<div class="watch-card">
+<img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=900&q=85" alt="Modern luxury watch">
+<div class="watch-card-content">
+<h3>Modern Collection</h3>
+<p>Contemporary elegance designed for modern lifestyles and bold personalities.</p>
+<div class="d-flex justify-content-between align-items-center mt-4">
+<span class="watch-price">Modern Luxury</span>
+<a href="#" class="card-link" onclick="showProduct('Modern Collection');return false;">DISCOVER</a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 reveal">
+<div class="watch-card">
+<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=85" alt="Premium luxury watch">
+<div class="watch-card-content">
+<h3>Prestige Collection</h3>
+<p>Distinctive luxury with remarkable craftsmanship and sophisticated character.</p>
+<div class="d-flex justify-content-between align-items-center mt-4">
+<span class="watch-price">Premium Edition</span>
+<a href="#" class="card-link" onclick="showProduct('Prestige Collection');return false;">DISCOVER</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EDITORIAL BANNER -->
+
+<section class="editorial section-padding">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<div class="editorial-box text-center reveal">
+<div class="section-label">BEYOND TIME</div>
+<h2 class="mt-3">A Legacy of <span style="color:var(--gold);font-style:italic;">Elegance</span></h2>
+<p class="mt-4">
+True luxury is not simply about what you wear. It is about the confidence, character and craftsmanship behind every detail. ALBERTO brings together timeless design and a passion for precision.
+</p>
+<a href="#story" class="gold-btn mt-3">OUR PHILOSOPHY</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FEATURED CAROUSEL -->
+
+<section class="showcase section-padding" id="showcase">
+<div class="container">
+
+<div class="text-center mb-5 reveal">
+<div class="section-label">HANDPICKED FOR YOU</div>
+<h2 class="section-heading">Featured Timepieces</h2>
+<p class="section-description">Discover the details that make every ALBERTO timepiece special.</p>
+</div>
+
+<div class="row justify-content-center reveal">
+<div class="col-lg-10">
+
+<div class="carousel-frame">
+<img id="featuredImage"
+src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1600&q=85"
+alt="Featured luxury timepiece">
+
+<div class="carousel-caption-custom">
+<div class="section-label">ALBERTO EXCLUSIVE</div>
+<h3 id="featuredTitle">The Royal Edition</h3>
+<p id="featuredDescription">Refined elegance. Exceptional character. Timeless design.</p>
+</div>
+</div>
+
+<div class="d-flex justify-content-between align-items-center mt-4">
+<div class="section-label" id="slideNumber">01 / 03</div>
+<div class="d-flex gap-3">
+<button class="carousel-control-custom" onclick="changeSlide(-1)" aria-label="Previous slide">
+<i class="bi bi-arrow-left"></i>
+</button>
+<button class="carousel-control-custom" onclick="changeSlide(1)" aria-label="Next slide">
+<i class="bi bi-arrow-right"></i>
+</button>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- STORY -->
+
+<section class="story section-padding" id="story">
+<div class="container">
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6 reveal">
+<img class="story-image"
+src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=85"
+alt="Luxury watch craftsmanship">
+</div>
+
+<div class="col-lg-6 reveal">
+<div class="story-content">
+<div class="section-label">THE ALBERTO EXPERIENCE</div>
+<h2 class="section-heading">Crafted With Purpose. <span style="color:var(--gold);font-style:italic;">Worn With Pride.</span></h2>
+
+<p>
+At ALBERTO, we believe that a watch is more than a way to measure time. It is a reflection of individuality, ambition and personal style.
+</p>
+
+<p>
+Our design philosophy brings together sophisticated aesthetics, carefully selected materials and attention to detail. Every collection is created to celebrate the beauty of timeless elegance.
+</p>
+
+<a href="#collections" class="gold-btn mt-3">EXPLORE COLLECTIONS</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TEXT WITH BACKGROUND IMAGE -->
+
+<section class="text-image-section">
+<div class="text-image-overlay">
+<div class="container">
+<div class="row justify-content-center text-center">
+<div class="col-lg-9">
+
+<span class="section-label">THE ALBERTO EXPERIENCE</span>
+
+<h2 class="luxury-heading">
+Elegance That <span>Defines Time</span>
+</h2>
+
+<p>
+Discover a world where luxury meets precision.
+Every ALBERTO timepiece represents timeless
+craftsmanship, sophisticated design and
+exceptional elegance.
+</p>
+
+<a href="#collections" class="gold-btn">
+EXPLORE COLLECTION
+</a>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+<div class="container">
+
+<div class="row g-4">
+
+<div class="col-lg-4 col-md-6">
+
+<h2 class="footer-logo">ALBERTO</h2>
+<p class="section-label">WATCH COMPANY</p>
+
+<p class="footer-description">
+Defining timeless elegance through sophisticated
+watch designs. Discover the art of fine timekeeping
+with Alberto Watch Company.
+</p>
+
+<div class="social-links mt-4">
+<a href="https://www.facebook.com"><i class="bi bi-facebook"></i></a>
+<a href="https://www.instagram.com"><i class="bi bi-instagram"></i></a>
+<a href="https://twitter.com"><i class="bi bi-twitter-x"></i></a>
+<a href="https://www.youtube.com"><i class="bi bi-youtube"></i></a>
+</div>
+
+</div>
+
+<div class="col-lg-2 col-md-6">
+<h5>Quick Links</h5>
+<ul class="footer-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="product.html">Products</a></li>
+<li><a href="technology.html">Technology</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<h5>Customer Care</h5>
+<ul class="footer-links">
+<li><a href="aboutus.html">About Us</a></li>
+<li><a href="support.html">Customer Support</a></li>
+<li><a href="store-locator.html">Store Locator</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+
+<div class="col-lg-3 col-md-6">
+<h5>Get In Touch</h5>
+
+<p class="footer-contact"><i class="bi bi-geo-alt-fill"></i>New York, United States</p>
+<p class="footer-contact"><i class="bi bi-telephone-fill"></i>+1 800 123 4567</p>
+<p class="footer-contact"><i class="bi bi-envelope-fill"></i>info@albertowatches.com</p>
+<p class="footer-contact"><i class="bi bi-clock-fill"></i>Mon - Sat: 9:00 AM - 9:00 PM</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Alberto Watch Company. All Rights Reserved.
+<br>Designed with Elegance.
+</div>
+
+</div>
+</footer>
+
+
+<!-- PRODUCT MODAL -->
+
+<div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title" id="productModalTitle">ALBERTO Collection</h5>
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body p-4">
+<p style="color:#c5b9a7;line-height:2;font-size:13px">
+Discover the distinctive character of this ALBERTO collection. Designed with refined details, timeless inspiration and a passion for elegant watchmaking.
+</p>
+<a href="#collections" class="gold-btn" data-bs-dismiss="modal">EXPLORE COLLECTIONS</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- BOOTSTRAP JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* FEATURED CAROUSEL - MANUAL CONTROLS */
+
+const slides = [
+{
+    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1600&q=85",
+    title: "The Royal Edition",
+    description: "Refined elegance. Exceptional character. Timeless design."
+},
+{
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=85",
+    title: "The Heritage Edition",
+    description: "Inspired by tradition. Designed for modern elegance."
+},
+{
+    image: "https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=1600&q=85",
+    title: "The Prestige Edition",
+    description: "A distinctive expression of confidence and luxury."
+}
+];
+
+let currentSlide = 0;
+
+function changeSlide(direction) {
+
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+    const image = document.getElementById("featuredImage");
+
+    image.style.opacity = "0";
+
+    setTimeout(() => {
+        image.src = slides[currentSlide].image;
+
+        document.getElementById("featuredTitle").textContent =
+            slides[currentSlide].title;
+
+        document.getElementById("featuredDescription").textContent =
+            slides[currentSlide].description;
+
+        document.getElementById("slideNumber").textContent =
+            "0" + (currentSlide + 1) + " / 0" + slides.length;
+
+        image.style.opacity = "1";
+    }, 250);
+}
+
+/* PRODUCT MODAL */
+
+function showProduct(name) {
+
+    document.getElementById("productModalTitle").textContent = name;
+
+    const modal = new bootstrap.Modal(
+        document.getElementById("productModal")
+    );
+
+    modal.show();
+}
+
+/* SCROLL REVEAL ANIMATION */
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    revealObserver.observe(element);
+});
+
+/* CLOSE MOBILE MENU AFTER CLICK */
+
+document.querySelectorAll(".navbar-nav .nav-link").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        const menu = document.getElementById("mainNavbar");
+
+        if (menu.classList.contains("show")) {
+            bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
